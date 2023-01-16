@@ -35,22 +35,22 @@ function App() {
         title={attribute[0].title}
         amount={attribute[0].amount}
         date={attribute[0].date}
-      ></ExpenseItem>
+      />
       <ExpenseItem
         title={attribute[1].title}
         amount={attribute[1].amount}
         date={attribute[1].date}
-      ></ExpenseItem>
+      />
       <ExpenseItem
         title={attribute[2].title}
         amount={attribute[2].amount}
         date={attribute[2].date}
-      ></ExpenseItem>
+      />
       <ExpenseItem
         title={attribute[3].title}
         amount={attribute[3].amount}
         date={attribute[3].date}
-      ></ExpenseItem>
+      />
     </div>
   );
 }
