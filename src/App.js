@@ -1,5 +1,4 @@
-import ExpenseItem from "./components/ExpenseItem";
-
+import Attributes from "./components/Attributes";
 function App() {
   const attribute = [
     {
@@ -31,26 +30,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <ExpenseItem
-        title={attribute[0].title}
-        amount={attribute[0].amount}
-        date={attribute[0].date}
-      />
-      <ExpenseItem
-        title={attribute[1].title}
-        amount={attribute[1].amount}
-        date={attribute[1].date}
-      />
-      <ExpenseItem
-        title={attribute[2].title}
-        amount={attribute[2].amount}
-        date={attribute[2].date}
-      />
-      <ExpenseItem
-        title={attribute[3].title}
-        amount={attribute[3].amount}
-        date={attribute[3].date}
-      />
+      <Attributes items={attribute}/>
     </div>
   );
 }
