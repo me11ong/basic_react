@@ -1,4 +1,6 @@
 import Attributes from "./components/Attributes";
+import NewExpense from "./NewExpense/NewExpense";
+
 function App() {
   const attribute = [
     {
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense/>
       <Attributes items={attribute}/>
     </div>
   );
