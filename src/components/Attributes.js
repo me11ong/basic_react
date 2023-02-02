@@ -10,6 +10,24 @@ function Attributes(props) {
   function filterChangeHandler(selectedYear) {
     setFilteredYear(selectedYear);
   }
+
+  const filteredAttributes = props.items.filter((attribute) => {
+    return attribute.date.getFullYear().toString() === filteredYear;
+  });
+
+  let attributesContent = <p>No Attributes found.</p>;
+
+  if (filteredAttributes.length > 0) {
+    attributesContent = filteredAttributes.map((attribute) => (
+      <ExpenseItem
+        key={attribute.id}
+        title={attribute.title}
+        amount={attribute.amount}
+        date={attribute.date}
+      />
+    ));
+  }
+
   return (
     <div>
       <Card className="attributes">
@@ -17,14 +35,7 @@ function Attributes(props) {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {props.items.map((attribute) => (
-          <ExpenseItem
-            key={attribute.id}
-            title={attribute.title}
-            amount={attribute.amount}
-            date={attribute.date}
-          />
-        ))} 
+        {attributesContent}
       </Card>
     </div>
   );
