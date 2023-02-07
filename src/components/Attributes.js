@@ -3,6 +3,7 @@ import "./Attributes.css";
 import Card from "./Card";
 import ExpenseFilter from "./ExpenseFilter";
 import AttributesList from "./AttributesList";
+import ExpensesChart from "./ExpensesChart";
 
 function Attributes(props) {
   const [filteredYear, setFilteredYear] = useState("2021");
@@ -24,6 +25,7 @@ function Attributes(props) {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ExpensesChart expenses={filteredAttributes}/>
         <AttributesList items={filteredAttributes}/>
       </Card>
     </div>
